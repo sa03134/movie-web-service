@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/movie-web-service.git/static/js/main.e67a9b06.js",
-    "index.html": "/movie-web-service.git/index.html",
-    "main.e67a9b06.js.map": "/movie-web-service.git/static/js/main.e67a9b06.js.map"
+    "main.js": "/movie-web-service/static/js/main.e67a9b06.js",
+    "index.html": "/movie-web-service/index.html",
+    "main.e67a9b06.js.map": "/movie-web-service/static/js/main.e67a9b06.js.map"
   },
   "entrypoints": [
     "static/js/main.e67a9b06.js"
