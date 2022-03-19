@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 
+const MIN_RATE = 8.4;
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=${MIN_RATE}&sort_by=year`
       )
     ).json();
     setMovies(json.data.movies);
@@ -26,6 +29,7 @@ function Home() {
         <div>
           {movies.map((movie) => (
             <Movie
+              rating={movie.rating}
               key={movie.id}
               id={movie.id}
               coverImg={movie.medium_cover_image}
