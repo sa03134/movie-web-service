@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Movie from "../components/Movie";
+import styles from "./Detail.module.css";
 
 function Detail() {
   const { id } = useParams();
@@ -22,9 +23,13 @@ function Detail() {
 
   return detail ? (
     <div>
-      <h2>
-        <Link to={`/movie/`}>Home</Link>
-      </h2>
+      <div>
+        <h2>
+          <Link className={styles.home} to={`/movie/`}>
+            Home
+          </Link>
+        </h2>
+      </div>
       <Movie
         rating={detail.data.movie.rating}
         key={detail.data.movie.id}
